@@ -9,7 +9,7 @@ RUN yum -y install wget epel-release && \
     yum -y install cobbler tftp-server dhcp openssl cobbler-web supervisor && \
     yum -y install wget file debmirror && \
     yum -y update && \
-    yum clean all && \
+    yum clean all
 #    yum -y install wget file debmirror python2-pip && \
 #    rpm -e --nodeps python2-django && \
 #    pip install --upgrade pip && \
