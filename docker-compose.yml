@@ -1,5 +1,5 @@
 cobbler:
-  image: jasonlix/docker-cobbler
+  image: iexception007/docker-cobbler:v1.0
   volumes:
     - /mnt:/mnt:ro
   env_file: cobbler.env
