@@ -20,3 +20,8 @@
 2、把系统镜像挂载到本机的`/mnt`目录下  
 3、运行cobbler容器：`docker-compose up -d`  
 4、进入cobbler容器，配置装机系统：`docker exec -it dockercobbler_cobbler_1 bash`  
+
+### 打开网页.
+https://<<cobbler_ip>>/cobbler_web/
+cobbler
+cobbler

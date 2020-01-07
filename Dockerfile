@@ -10,11 +10,9 @@ RUN yum -y install wget epel-release && \
     yum -y install wget file debmirror && \
     yum -y update && \
     yum clean all
-#    yum -y install wget file debmirror python2-pip && \
-#    rpm -e --nodeps python2-django && \
-#    pip install --upgrade pip && \
-#    pip install Django==1.8.17
 
+ADD kickstarts/ubuntu-18-x86_64.ks /var/lib/cobbler/kickstarts/ubuntu18.ks
+ADD kickstarts/ubuntu-16-x86_64.ks /var/lib/cobbler/kickstarts/ubuntu16.ks
 ADD supervisord.d/conf.ini /etc/supervisord.d/conf.ini
 ADD start.sh /start.sh
 RUN chmod +x /start.sh

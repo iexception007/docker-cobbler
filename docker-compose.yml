@@ -1,4 +1,5 @@
 cobbler:
+  container_name: cobbler
   image: iexception007/docker-cobbler:v1.0
   volumes:
     - /mnt:/mnt:ro
