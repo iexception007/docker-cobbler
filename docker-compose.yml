@@ -3,5 +3,6 @@ cobbler:
   image: iexception007/docker-cobbler:v1.0
   volumes:
     - /mnt:/mnt:ro
+    - ${PWD}/update.sh:/update.sh
   env_file: cobbler.env
   net: "host"

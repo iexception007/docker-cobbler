@@ -11,10 +11,15 @@ RUN yum -y install wget epel-release && \
     yum -y update && \
     yum clean all
 
+ADD kickstarts/centos7-x86_64.ks   /var/lib/cobbler/kickstarts/centos7.ks
 ADD kickstarts/ubuntu-18-x86_64.ks /var/lib/cobbler/kickstarts/ubuntu18.ks
 ADD kickstarts/ubuntu-16-x86_64.ks /var/lib/cobbler/kickstarts/ubuntu16.ks
 ADD supervisord.d/conf.ini /etc/supervisord.d/conf.ini
-ADD start.sh /start.sh
+
+ADD update.sh /update.sh
+ADD start.sh  /start.sh
+RUN chmod +x /update.sh
 RUN chmod +x /start.sh
+
 
 CMD ["/start.sh"]
