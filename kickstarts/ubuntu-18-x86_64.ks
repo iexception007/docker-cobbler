@@ -11,8 +11,10 @@ d-i clock-setup/utc boolean true
 d-i clock-setup/ntp boolean true
 d-i clock-setup/ntp-server  string pool.ntp.org
 d-i mirror/country string manual
-d-i mirror/http/hostname string $http_server
-d-i mirror/http/directory string $install_source_directory
+#d-i mirror/http/hostname string $http_server
+#d-i mirror/http/directory string $install_source_directory
+d-i mirror/http/hostname string mirrors.aliyun.com
+d-i mirror/http/directory string /ubuntu
 #d-i mirror/http/proxy string
 d-i live-installer/net-image string http://$http_server/cobbler/links/$distro_name/install/filesystem.squashfs
 d-i partman/choose_partition select finish
