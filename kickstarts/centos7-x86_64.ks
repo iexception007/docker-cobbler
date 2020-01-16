@@ -20,10 +20,10 @@ keyboard us
 lang en_US
 
 # Use network installation
-#url --url=$tree
-url --url="http://mirrors.aliyun.com/centos/7/os/x86_64/"
-repo --name="CentOS" --baseurl="http://mirrors.aliyun.com/centos/7/os/x86_64/"
-repo --name="EPEL" --baseurl="http://mirrors.aliyun.com/epel/7/x86_64/"
+url --url=$tree
+#url --url="http://mirrors.aliyun.com/centos/7/os/x86_64/"
+#repo --name="CentOS" --baseurl="http://mirrors.aliyun.com/centos/7/os/x86_64/"
+#repo --name="EPEL" --baseurl="http://mirrors.aliyun.com/epel/7/x86_64/"
 
 # If any cobbler repo definitions were referenced in the kickstart profile, include them here.
 $yum_repo_stanza
@@ -39,7 +39,7 @@ selinux --disabled
 # Do not configure the X Window System
 skipx
 # System timezone
-timezone  America/New_York
+timezone  Asia/Shanghai
 # Install OS instead of upgrade
 install
 # Clear the Master Boot Record
