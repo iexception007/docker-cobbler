@@ -1,6 +1,6 @@
 cobbler:
   container_name: cobbler
-  image: iexception007/docker-cobbler:v1.0
+  image: iexception007/cobbler:v1.0
   volumes:
     - /mnt:/mnt:ro
     - ${PWD}/update.sh:/update.sh
